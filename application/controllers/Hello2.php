@@ -32,7 +32,8 @@ class Hello2 extends CI_Controller
         @$class = $_GET['class'];
 
         $this->model_sinhvien->add($name, $date, $class);
-        return "abc";
+        header('Content-type: application/json');
+        echo "1";
     }
 
     public function info($id)
@@ -52,7 +53,8 @@ class Hello2 extends CI_Controller
         @$date = $_GET['date'];
         @$class = $_GET['class'];
         $this->model_sinhvien->edit($ID, $name, $date, $class);
-        echo "thành công";
+        header('Content-type: application/json');
+        echo "1";
     }
 
     public function delete()
@@ -64,7 +66,8 @@ class Hello2 extends CI_Controller
         //redirect('http://localhost:8080/thunghiem/hello');
         //header('Refresh:0;url=http://localhost:8080/thunghiem/hello2');
         // $this->index();
-        echo "abc";
+        header('Content-type: application/json');
+        echo "1";
     }
 
     public function index()

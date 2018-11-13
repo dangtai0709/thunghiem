@@ -69,11 +69,8 @@
                                     type: "post",
                                     url: "/thunghiem/hello2/delete",
                                     dataType: "json",
-                                    success: function (msg) {
-                                        if (msg) {
-                                            alert('Thành công');
-                                            location.reload();
-                                        }
+                                    success: function () {
+                                        location.reload(true);
                                     }, data: sendInfo
                                 });
                             });
@@ -89,8 +86,8 @@
 
 
     <script type="text/javascript">
-        $('#exampleModal').on('show.bs.modal')
-        $('#sua').on('show.bs.modal')
+        $('#exampleModal').on('show.bs.modal');
+        $('#sua').on('show.bs.modal');
         $('#xoa').on('show.bs.modal')
     </script>
 
@@ -144,14 +141,9 @@
                             type: "get",
                             url: "/thunghiem/hello2/add",
                             dataType: "json",
-                            success: function (msg) {
-                                //   $( "#html" ).load( "thunghiem/hello2" );
-                                if (msg) {
-                                    alert("Thêm thành công" + msg);
-                                    location.reload(true);
-                                } else {
-                                    alert("Có lỗi !");
-                                }
+                            success: function () {
+                                alert('Thêm thành công');
+                                location.reload(true);
                             },
 
                             data: sendInfo
@@ -213,14 +205,10 @@
                             type: "get",
                             url: "/thunghiem/hello2/edit",
                             dataType: "json",
-                            success: function (msg) {
+                            success: function () {
                                 //   $( "#html" ).load( "thunghiem/hello2" );
-                                if (msg) {
-                                    alert("Thêm thành công" + msg);
-                                    location.reload(true);
-                                } else {
-                                    alert("Có lỗi !");
-                                }
+                                alert('Sửa thành công');
+                                location.reload(true);
                             },
 
                             data: sendInfo
